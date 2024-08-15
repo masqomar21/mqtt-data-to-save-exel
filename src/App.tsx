@@ -24,7 +24,7 @@ function App() {
     const [protocol, setProtocol] = useState<string>("wss");
     const [topic, setTopic] = useState<string>("esp32/topik");
     const [controlTopic, setControlTopic] = useState<string>("esp32/control");
-    const [columns, setColumns] = useState<string[]>(["data1, data2"]);
+    const [columns, setColumns] = useState<string[]>(["data1,data2"]);
 
     const [chartData, setChartData] = useState({
         labels: [] as string[],
