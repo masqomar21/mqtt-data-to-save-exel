@@ -51,6 +51,7 @@ function App() {
                 console.log("Connected to MQTT Broker");
                 setIsConnected(true);
                 newClient.subscribe(topic);
+                newClient.publish(controlTopic, "START");
             });
 
             newClient.on("message", (receivedTopic: string, message: Buffer) => {
@@ -113,9 +114,6 @@ function App() {
 
     const handleStart = () => {
         setIsRunning(true);
-        if (client) {
-            client.publish(controlTopic, "START");
-        }
     };
 
     const handleStop = () => {
