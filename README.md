@@ -109,7 +109,7 @@ mosquitto_pub -h broker.hivemq.com -p 8000 -t esp32/control -m "300,250,12.40,62
 
 ## author
 
-- [masqomar21](https:://github.com/masqomar21)
+- [masqomar21](https://github.com/masqomar21)
 
 <!-- This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
