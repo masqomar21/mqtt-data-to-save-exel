@@ -21,7 +21,7 @@ interface MqttMessage {
     host: "broker.hivemq.com",
     port: 8000,
     path: "/mqtt",
-    protocol: "ws",
+    protocol: "wss",
 };
 
 
