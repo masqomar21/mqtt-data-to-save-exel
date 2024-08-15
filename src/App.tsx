@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import mqtt, { IClientOptions, MqttClient } from "mqtt";
 import * as XLSX from "xlsx";
 
