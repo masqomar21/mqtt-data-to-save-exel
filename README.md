@@ -7,7 +7,7 @@ This is a simple project that uses React, TypeScript, Vite, MQTT and Exel to cre
 ## Clone & Installation
 
 ```bash
-git clone https://github.com/masqomar21/mqtt-data-to-save-exel.git
+git clone --branch dinamis https://github.com/masqomar21/mqtt-data-to-save-exel.git
 ```
 
 ```bash
@@ -42,7 +42,7 @@ npm run build
 
 ## Configuration
 
-### MQTT
+<!-- ### MQTT
 
 ```javascript
 // src/app.ts
@@ -86,25 +86,25 @@ const rowData: MqttMessage = {
     pitch: data[2],
     servoAngle: data[3],
 }
-```
+``` -->
 
 ### Data Payload
 
 ```bash
-// fsr1value,fsr2value,pitch,servoAngle
-'300,250,12.40,62'
+// colom separated by ','
+'300,250,12.40,62' // colom1 : 300, colom2 : 250, colom3 : 12.40, colom4 : 62
 ```
 
 ### mqtt-Comand-line
 
 ```bash
-// subscribe (use mosquitto)
-mosquitto_sub -h broker.hivemq.com -p 8000 -t esp32/affoData
+// subscribe
+mqtt -h <broker-host> -p <broker-port> -t <topic>
 ```
 
 ```bash
-// publish (use mosquitto)
-mosquitto_pub -h broker.hivemq.com -p 8000 -t esp32/control -m "300,250,12.40,62"
+// publish
+mqtt -h <broker-host> -p <broker-port> -t <topic> -m "300,250,12.40,62"
 ```
 
 ## author
