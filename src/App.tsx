@@ -22,9 +22,9 @@ function App() {
     const [host, setHost] = useState<string>("broker.hivemq.com");
     const [port, setPort] = useState<number>(8884);
     const [protocol, setProtocol] = useState<string>("wss");
-    const [topic, setTopic] = useState<string>("esp32/affoData");
+    const [topic, setTopic] = useState<string>("esp32/topik");
     const [controlTopic, setControlTopic] = useState<string>("esp32/control");
-    const [columns, setColumns] = useState<string[]>(["fsr1value", "fsr2value", "pitch", "servoAngle"]);
+    const [columns, setColumns] = useState<string[]>(["data 1, data 2"]);
 
     const [chartData, setChartData] = useState({
         labels: [] as string[],
