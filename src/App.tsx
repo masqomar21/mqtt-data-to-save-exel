@@ -19,7 +19,7 @@ interface MqttMessage {
 
   const options  = {
     host: "broker.hivemq.com",
-    port: 8000,
+    port: 8884,
     path: "/mqtt",
     protocol: "wss",
 };
