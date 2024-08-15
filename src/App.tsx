@@ -168,6 +168,11 @@ function App() {
     <div style={{ padding: "20px" }}>
     <h2>MQTT Data to Excel</h2>
 
+    <p>semple code MQTT for esp32</p>
+    <a href="https://github.com/masqomar21/mqtt-data-to-save-exel/blob/main/mqtt-ino/mqtt-ino.ino" target="_blank" rel="noreferrer">
+    github.com/masqomar21/mqtt-data-to-save-exel/blob/main/mqtt-ino/mqtt-ino.ino
+    </a>
+
     {/* Input for Excel file name */}
     <div>
       <label>Excel File Name: </label>
