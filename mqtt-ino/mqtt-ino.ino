@@ -7,7 +7,7 @@ const char *password = "budakcindo";
 
 // MQTT broker settings
 const char *mqtt_server = "broker.hivemq.com";
-const char *mqtt_data_topic = "esp32/data";
+const char *mqtt_data_topic = "esp32/affoData";
 const char *mqtt_control_topic = "esp32/control";
 
 WiFiClient espClient;

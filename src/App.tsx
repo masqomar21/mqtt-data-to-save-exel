@@ -73,6 +73,7 @@ function App() {
           console.log("Connected to MQTT Broker");
           setIsConnected(true);
           newClient.subscribe(mqttTopic);
+          newClient.publish(mqttControlTopic, "START"); // Send start command to ESP32
         });
   
         newClient.on("message", (topic: string, message: Buffer) => {
@@ -124,10 +125,10 @@ function App() {
     }, [isRunning]);
   
     const handleStart = () => {
-      setIsRunning(true);
-      if (client) {
-        client.publish(mqttControlTopic, "START"); // Send start command to ESP32
-      }
+        setIsRunning(true);
+        // if (client) {
+        //     client.publish(mqttControlTopic, "START"); // Send start command to ESP32
+        // }
     };
   
     const handleStop = () => {
