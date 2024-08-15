@@ -16,8 +16,7 @@ interface MqttMessage {
     pitch: string;
     servoAngle: string;
   }
-
-  const options  = {
+const options  = {
     host: "broker.hivemq.com",
     port: 8884,
     path: "/mqtt",
