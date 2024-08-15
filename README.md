@@ -51,8 +51,8 @@ npm run build
 const options = {
 	host: 'broker.hivemq.com',
 	port: 8000,
-	path: '/mqtt',
-	protocol: 'ws'
+	path: '/mqtt'
+	// protocol: 'wss'
 }
 ```
 
