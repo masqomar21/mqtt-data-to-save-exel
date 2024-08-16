@@ -2,13 +2,14 @@
 #include <PubSubClient.h>
 
 // WiFi credentials
-const char *ssid = "<your_ssid>";
-const char *password = "<your password ssid>";
+const char *ssid = "masqomar21";
+const char *password = "budakcindo";
 
 // MQTT broker settings
 const char *mqtt_server = "broker.hivemq.com";
 const char *mqtt_data_topic = "esp32/affoData";
 const char *mqtt_control_topic = "esp32/control";
+const char *mqtt_check_topic = "esp32/check"; // Topik untuk pengecekan perangkat
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -48,6 +49,7 @@ void reconnect()
         {
             Serial.println("connected");
             client.subscribe(mqtt_control_topic);
+            client.subscribe(mqtt_check_topic); // Subscribe to the check topic
         }
         else
         {
@@ -79,6 +81,15 @@ void callback(char *topic, byte *payload, unsigned int length)
         {
             isRunning = false;
             Serial.println("Stop command received");
+        }
+    }
+    // Handle device check messages from React
+    else if (String(topic) == mqtt_check_topic)
+    {
+        if (incomingMessage == "CHECK_DEVICE")
+        {
+            Serial.println("Device check message received");
+            client.publish(mqtt_check_topic, "DEVICE_OK"); // Respond with device status
         }
     }
 }
