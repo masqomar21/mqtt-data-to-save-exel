@@ -246,12 +246,12 @@ function App() {
                 </button>
 
                 {/* Button to save data to Excel */}
-                <button onClick={handleSaveToExcel} disabled={messages.length === 0 || isRunning || !deviceConnected}>
+                <button onClick={handleSaveToExcel} disabled={messages.length === 0 || isRunning}>
                     Save to Excel
                 </button>
 
                 {/* Button to clear all messages */}
-                <button onClick={handleClearMessages} disabled={messages.length === 0 || isRunning || !deviceConnected}>
+                <button onClick={handleClearMessages} disabled={messages.length === 0 || isRunning}>
                     Clear Data
                 </button>
             </div>
